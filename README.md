@@ -31,3 +31,10 @@ Leap years. `1900` is **not** a leap year (divisible by 100, not 400); `2000` **
 - `MAX_YEAR` — `9999`.
 
 Years `1..9999` are accepted, matching `datetime.date`. Inputs outside that range raise `ValueError`.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
