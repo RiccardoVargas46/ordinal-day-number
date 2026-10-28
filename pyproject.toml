@@ -1,6 +1,6 @@
 [project]
 name = "ordinal-day-number"
-version = "0.1.0"
+version = "0.1.1"
 description = "Converts calendar dates to and from sequential day numbers for indexing."
 requires-python = ">=3.10"
 dependencies = []
